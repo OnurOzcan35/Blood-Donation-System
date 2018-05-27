@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/Login.css">
+</head>
+<body>
+    <div class="loginBox">
+        <img src="~/Images/user.png" class="user">
+        <h1 style="text-align:center;">
+            Blood Donation System </h1>
+                <h2>@ViewBag.Hospital</h2>
+                @using (Html.BeginForm())
+                {
+                    <p>Kullanıcı Adı :</p>
+                    <input class="UserName" type="text" name="UserName" placeholder="">
+                    <p>Şifre :</p>
+                    <input class="Password" type="password" name="Password" placeholder="">
+                    <input type="submit" name="" value="Login">
+                    <p>@Html.ValidationSummary() </p>
+                }
+    </div>
+</body>

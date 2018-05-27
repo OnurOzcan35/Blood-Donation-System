@@ -1,0 +1,6 @@
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.Requirements\bin\Debug\BloodDonation.Requirements.dll.config
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.Requirements\bin\Debug\BloodDonation.Requirements.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.Requirements\bin\Debug\BloodDonation.Requirements.pdb
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.Requirements\obj\Debug\BloodDonation.Requirements.csproj.CoreCompileInputs.cache
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.Requirements\obj\Debug\BloodDonation.Requirements.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.Requirements\obj\Debug\BloodDonation.Requirements.pdb

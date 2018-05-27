@@ -1,0 +1,55 @@
+﻿@model IEnumerable<BloodDonation.HospitalClient.Models.UserModel>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<h2>Kabul Edenler Listesi</h2>
+
+<br />
+<hr />
+<br />
+
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>
+            Kullanıcı Id
+        </th>
+        <th style="text-align:center">
+            Kan Grubu
+        </th>
+        <th style="text-align:center">
+            Mesaj Gönderme
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.BloodType)
+            </td>
+            <td style="text-align:center">
+                @if (item.IsMessageAv)
+                {
+                    @Html.ActionLink("Mesaj Gönder", "Message", new { id = @item.UserId }, new { @class = "btn btn-success btn-sm" })
+                }
+                else
+                {
+                    <label class="btn btn-danger btn-sm">Mesaj Gönder</label>
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<div>
+    @Html.ActionLink("Listeye Geri Dön", "Index",null , new { @class = "btn btn-primary btn-sm" })
+</div>
+<br />

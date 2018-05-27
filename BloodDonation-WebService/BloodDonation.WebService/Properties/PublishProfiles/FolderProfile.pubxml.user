@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Bu dosya, Web projenizin yayımlama/paket işlemi tarafından kullanılıyor. MSBuild dosyasını düzenleyerek
+bu işlemin davranışını düzenleyebilirsiniz. Bununla ilgili daha fazla bilgi edinmek için https://go.microsoft.com/fwlink/?LinkID=208121 adresini ziyaret edin. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\BloodDonation</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/BloodDonation.DTO.dll">
+      <publishTime>05/18/2018 15:39:34</publishTime>
+    </File>
+    <File Include="bin/BloodDonation.DTO.pdb">
+      <publishTime>05/18/2018 15:39:34</publishTime>
+    </File>
+    <File Include="bin/BloodDonation.Requirements.dll">
+      <publishTime>05/17/2018 14:25:57</publishTime>
+    </File>
+    <File Include="bin/BloodDonation.Requirements.dll.config">
+      <publishTime>04/29/2018 21:11:34</publishTime>
+    </File>
+    <File Include="bin/BloodDonation.Requirements.pdb">
+      <publishTime>05/17/2018 14:25:57</publishTime>
+    </File>
+    <File Include="bin/BloodDonation.WebService.dll">
+      <publishTime>05/20/2018 23:49:45</publishTime>
+    </File>
+    <File Include="bin/BloodDonation.WebService.pdb">
+      <publishTime>05/20/2018 23:49:45</publishTime>
+    </File>
+    <File Include="bin/Config.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/24/2018 17:44:14</publishTime>
+    </File>
+    <File Include="Config.xml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/29/2018 22:42:06</publishTime>
+    </File>
+    <File Include="WebService.svc">
+      <publishTime>03/18/2018 15:19:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<BloodDonation.HospitalClient.Models.BloodModel>
+@{
+    ViewBag.Title = "Index";
+
+
+}
+
+<br />
+<br />
+<h2>Kan Talebi Oluşturma</h2>
+<h3>@Html.ValidationSummary()</h3>
+<hr />
+
+<p>
+    <div class="btn btn-primary" data-target="#BloodModal" data-toggle="modal"> Kan Talebi Oluştur </div>
+</p>
+<div class="modal" id="BloodModal" tabindex="-1">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">
+                    Kan Talebi Oluştur
+                </h4>
+                @using (Html.BeginForm())
+                {
+                    <div class="modal-body">
+                        <label for="inputBloodType" class="control-label col-md-3">Kan Grubu</label>
+                        @Html.DropDownList("BloodType", new SelectList(ViewBag.BloodType, "Value", "Text"), "Kan Grubu Seçiniz", new { @class = "control-label" })
+                    </div>
+                    <div class="modal-footer"></div>
+                    <input type="submit" class="btn btn-primary" value="Oluştur">
+                    <button class="btn btn-danger" data-dismiss="modal"> Vazgeç </button>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<br />
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th style="width:70%">
+            Kan Grubu
+        </th>
+        <th style="width:16%">
+            Onaylayan Kişi Sayısı
+        </th>
+        <th style="width:200px"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodType)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Counter)
+            </td>
+            <td>
+                @{ string id = string.Empty;}
+                @if (item.BloodType.Contains("+"))
+                {
+                    id = item.BloodType.Substring(0, item.BloodType.Length - 1);
+                }
+                else
+                {
+
+                    id = item.BloodType;
+                }
+                @Html.ActionLink("Talebe Git", "Details", new { id = @id }, new { @class = "btn btn-primary btn-sm " })
+                @Html.ActionLink("İptal Et", "Delete", new { id = @id }, new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@if (!string.IsNullOrEmpty(ViewBag.JsMessage))
+{
+    <script type="text/javascript">
+        alert('@ViewBag.JsMessage');
+    </script>
+}
+
+<br />
+<br />
+<br />
+<br />
+

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<BloodDonation.HospitalClient.Models.MessageModel>
+@{
+    ViewBag.Title = "Message";
+
+    BloodDonation.HospitalClient.Models.MessageModel id = (BloodDonation.HospitalClient.Models.MessageModel)ViewData["modelSend"];
+}
+<br />
+<br />
+<h2>Mesajlaşma Sayfası</h2>
+<br />
+<br />
+<hr />
+<br />
+<br />
+<br />
+<div class="text-center">
+    <div class="">
+        @foreach (var item in Model)
+        {
+            if (item.IsPerson)
+            {
+                <div class="pull-left">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    <label class="btn btn-default">
+                        @item.Content
+                    </label>
+                </div>
+            }
+            else
+            {
+
+                <div class="pull-right">
+                    <label class="btn btn-default">
+                        @item.Content
+                    </label>
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </div>
+            }
+            <br />
+            <br />
+
+        }
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <hr />
+    <br />
+    @using (Html.BeginForm())
+    {
+        <input style="width:87%" class="col-sm-8 form-control Content" type="text" name="Content" />
+        <button type="submit" style="width:12%" id="btnSave" class="col-sm-pull-2 btn btn-primary" value="Save">Gönder</button>
+
+        <div class="invisible">
+            <input value="@id.UserId" name="UserId" type="text" />
+            <input value="@id.HospitalId" name="HospitalId" type="number" />
+        </div>
+    }
+    <br />
+    <br />
+    <br />
+
+    <br />
+    @Html.ActionLink("Listeye Dön", "Index", null, new { @class = "pull-left btn btn-warning" })
+    <br />
+    <br />
+</div>
+
+@*<script>
+    $(document).ready(function () {
+        $("#btnSave").on('click', function () {
+            var url = '@Url.Action("Message", "Home")';
+            $.ajax({
+                url:url,
+                type:"POST",
+                data:{
+                    UserId : @id.UserId,
+                    HospitalId : @id.HospitalId,
+                    IsPerson: @id.IsPerson,
+                    Content = @id.Content
+
+                },
+                datatype:'json',
+                ContentType:'application/json;utf-8'
+            }).done(function(resp){
+                alert('Success ' +resp);
+            }).error(function(err){
+                alert("Error " + err.status);
+            });
+ 
+        });
+ 
+    });
+</script>*@

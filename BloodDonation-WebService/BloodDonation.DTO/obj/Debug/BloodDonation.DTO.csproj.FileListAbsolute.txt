@@ -1,0 +1,5 @@
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.DTO\bin\Debug\BloodDonation.DTO.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.DTO\bin\Debug\BloodDonation.DTO.pdb
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.DTO\obj\Debug\BloodDonation.DTO.csproj.CoreCompileInputs.cache
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.DTO\obj\Debug\BloodDonation.DTO.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.DTO\obj\Debug\BloodDonation.DTO.pdb

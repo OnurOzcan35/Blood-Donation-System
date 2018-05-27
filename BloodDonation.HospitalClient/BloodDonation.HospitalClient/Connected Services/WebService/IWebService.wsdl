@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/BloodDonation/WebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/BloodDonation/WebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/BloodDonation/WebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BloodDonation.DTO" />
+      <xsd:import schemaLocation="http://localhost/BloodDonation/WebService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WebService_UserRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegister" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUser" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUserTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserTime" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUserTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserDelete" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserLocationUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLocationUpdate" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserLocationUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLocationUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUserLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserLocation" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUserLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectHospital_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectHospital" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectHospital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectHospitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserLocationDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLocationDelete" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserLocationDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLocationDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserUpdateGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserUpdateGeneral" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UserUpdateGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserUpdateGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_ControlHospitalUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ControlHospitalUser" />
+  </wsdl:message>
+  <wsdl:message name="WebService_ControlHospitalUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ControlHospitalUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNotification" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UpdateStateNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStateNotification" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UpdateStateNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStateNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUserNotificationAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserNotificationAccept" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SelectUserNotificationAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserNotificationAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_DeleteAllUserLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllUserLocations" />
+  </wsdl:message>
+  <wsdl:message name="WebService_DeleteAllUserLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllUserLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UpdateAllUserTimes_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAllUserTimes" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UpdateAllUserTimes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAllUserTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_AddToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToken" />
+  </wsdl:message>
+  <wsdl:message name="WebService_AddToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_NotificationAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationAccept" />
+  </wsdl:message>
+  <wsdl:message name="WebService_NotificationAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_NotificationFinished_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationFinished" />
+  </wsdl:message>
+  <wsdl:message name="WebService_NotificationFinished_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationFinishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="WebService_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_GetActiveNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveNotification" />
+  </wsdl:message>
+  <wsdl:message name="WebService_GetActiveNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_GetNotFinishedNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotFinishedNotification" />
+  </wsdl:message>
+  <wsdl:message name="WebService_GetNotFinishedNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotFinishedNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_GetAllMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessages" />
+  </wsdl:message>
+  <wsdl:message name="WebService_GetAllMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UpdateReadNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReadNotification" />
+  </wsdl:message>
+  <wsdl:message name="WebService_UpdateReadNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReadNotificationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService">
+    <wsdl:operation name="UserRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UserRegister" message="tns:WebService_UserRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UserRegisterResponse" message="tns:WebService_UserRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SelectUser" message="tns:WebService_SelectUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SelectUserResponse" message="tns:WebService_SelectUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UserUpdateTime" message="tns:WebService_UserUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UserUpdateTimeResponse" message="tns:WebService_UserUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SelectUserTime" message="tns:WebService_SelectUserTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SelectUserTimeResponse" message="tns:WebService_SelectUserTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UserDelete" message="tns:WebService_UserDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UserDeleteResponse" message="tns:WebService_UserDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLocationUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UserLocationUpdate" message="tns:WebService_UserLocationUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UserLocationUpdateResponse" message="tns:WebService_UserLocationUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SelectUserLocation" message="tns:WebService_SelectUserLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SelectUserLocationResponse" message="tns:WebService_SelectUserLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectHospital">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SelectHospital" message="tns:WebService_SelectHospital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SelectHospitalResponse" message="tns:WebService_SelectHospital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLocationDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UserLocationDelete" message="tns:WebService_UserLocationDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UserLocationDeleteResponse" message="tns:WebService_UserLocationDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UserUpdateGeneral" message="tns:WebService_UserUpdateGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UserUpdateGeneralResponse" message="tns:WebService_UserUpdateGeneral_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ControlHospitalUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/ControlHospitalUser" message="tns:WebService_ControlHospitalUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/ControlHospitalUserResponse" message="tns:WebService_ControlHospitalUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SelectNotification" message="tns:WebService_SelectNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SelectNotificationResponse" message="tns:WebService_SelectNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStateNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UpdateStateNotification" message="tns:WebService_UpdateStateNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UpdateStateNotificationResponse" message="tns:WebService_UpdateStateNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserNotificationAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SelectUserNotificationAccept" message="tns:WebService_SelectUserNotificationAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SelectUserNotificationAcceptResponse" message="tns:WebService_SelectUserNotificationAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllUserLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/DeleteAllUserLocations" message="tns:WebService_DeleteAllUserLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/DeleteAllUserLocationsResponse" message="tns:WebService_DeleteAllUserLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllUserTimes">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UpdateAllUserTimes" message="tns:WebService_UpdateAllUserTimes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UpdateAllUserTimesResponse" message="tns:WebService_UpdateAllUserTimes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/AddToken" message="tns:WebService_AddToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/AddTokenResponse" message="tns:WebService_AddToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificationAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/NotificationAccept" message="tns:WebService_NotificationAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/NotificationAcceptResponse" message="tns:WebService_NotificationAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificationFinished">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/NotificationFinished" message="tns:WebService_NotificationFinished_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/NotificationFinishedResponse" message="tns:WebService_NotificationFinished_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/SendMessage" message="tns:WebService_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/SendMessageResponse" message="tns:WebService_SendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/GetActiveNotification" message="tns:WebService_GetActiveNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/GetActiveNotificationResponse" message="tns:WebService_GetActiveNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotFinishedNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/GetNotFinishedNotification" message="tns:WebService_GetNotFinishedNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/GetNotFinishedNotificationResponse" message="tns:WebService_GetNotFinishedNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/GetAllMessages" message="tns:WebService_GetAllMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/GetAllMessagesResponse" message="tns:WebService_GetAllMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReadNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/WebService/UpdateReadNotification" message="tns:WebService_UpdateReadNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/WebService/UpdateReadNotificationResponse" message="tns:WebService_UpdateReadNotification_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_WebService" type="tns:WebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserRegister">
+      <soap:operation soapAction="http://tempuri.org/WebService/UserRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUser">
+      <soap:operation soapAction="http://tempuri.org/WebService/SelectUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/WebService/UserUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserTime">
+      <soap:operation soapAction="http://tempuri.org/WebService/SelectUserTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserDelete">
+      <soap:operation soapAction="http://tempuri.org/WebService/UserDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLocationUpdate">
+      <soap:operation soapAction="http://tempuri.org/WebService/UserLocationUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserLocation">
+      <soap:operation soapAction="http://tempuri.org/WebService/SelectUserLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectHospital">
+      <soap:operation soapAction="http://tempuri.org/WebService/SelectHospital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLocationDelete">
+      <soap:operation soapAction="http://tempuri.org/WebService/UserLocationDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdateGeneral">
+      <soap:operation soapAction="http://tempuri.org/WebService/UserUpdateGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ControlHospitalUser">
+      <soap:operation soapAction="http://tempuri.org/WebService/ControlHospitalUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNotification">
+      <soap:operation soapAction="http://tempuri.org/WebService/SelectNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStateNotification">
+      <soap:operation soapAction="http://tempuri.org/WebService/UpdateStateNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserNotificationAccept">
+      <soap:operation soapAction="http://tempuri.org/WebService/SelectUserNotificationAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllUserLocations">
+      <soap:operation soapAction="http://tempuri.org/WebService/DeleteAllUserLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllUserTimes">
+      <soap:operation soapAction="http://tempuri.org/WebService/UpdateAllUserTimes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToken">
+      <soap:operation soapAction="http://tempuri.org/WebService/AddToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationAccept">
+      <soap:operation soapAction="http://tempuri.org/WebService/NotificationAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationFinished">
+      <soap:operation soapAction="http://tempuri.org/WebService/NotificationFinished" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/WebService/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveNotification">
+      <soap:operation soapAction="http://tempuri.org/WebService/GetActiveNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotFinishedNotification">
+      <soap:operation soapAction="http://tempuri.org/WebService/GetNotFinishedNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessages">
+      <soap:operation soapAction="http://tempuri.org/WebService/GetAllMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReadNotification">
+      <soap:operation soapAction="http://tempuri.org/WebService/UpdateReadNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IWebService">
+    <wsdl:port name="BasicHttpBinding_WebService" binding="tns:BasicHttpBinding_WebService">
+      <soap:address location="http://localhost/BloodDonation/WebService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

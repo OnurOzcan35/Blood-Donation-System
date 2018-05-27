@@ -1,0 +1,16 @@
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\Config.xml
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.WebService.dll.config
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.WebService.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.WebService.pdb
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.DTO.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.Requirements.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\Newtonsoft.Json.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.DTO.pdb
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.Requirements.pdb
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\BloodDonation.Requirements.dll.config
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\bin\Newtonsoft.Json.xml
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\obj\Debug\BloodDonation.WebService.csprojResolveAssemblyReference.cache
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\obj\Debug\BloodDonation.WebService.csproj.CoreCompileInputs.cache
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\obj\Debug\BloodDonation.WebService.csproj.CopyComplete
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\obj\Debug\BloodDonation.WebService.dll
+C:\Users\onuro\documents\visual studio 2017\Projects\BloodDonation\BloodDonation.WebService\obj\Debug\BloodDonation.WebService.pdb

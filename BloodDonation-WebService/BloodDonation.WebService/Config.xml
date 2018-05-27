@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parameters>
+  <Server>ONUR-PC\SQLEXPRESS</Server>
+  <User>BloodDonation</User>
+  <Password>DonationPassword</Password>
+  <DatabaseName>BloodDonation</DatabaseName>
+</Parameters>

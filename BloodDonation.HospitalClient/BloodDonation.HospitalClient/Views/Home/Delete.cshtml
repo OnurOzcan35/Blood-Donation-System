@@ -1,0 +1,42 @@
+﻿@model BloodDonation.HospitalClient.Models.BloodModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Kan Talebi İptal</h2>
+<br />
+
+<h3>Kan talebini iptal etmek istediğinizden emin misiniz?</h3>
+<br />
+<br />
+<div>
+    <hr />
+    <br />
+    <h4 class="font-weight-bold">Kan Talebi Bilgisi</h4>
+    <br />
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            Kan Grubu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodType)
+        </dd>
+    </dl>
+
+    <br />
+    <br />
+    
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="İptal Et" class="btn btn-danger" />
+            @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-warning" })
+        </div>
+    }
+</div>
+<br />
